@@ -4,6 +4,7 @@ const { tokenGenerator, voiceResponse } = require("./handler");
 const router = new Router();
 
 router.get("/token", (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin","*")
   res.send(tokenGenerator());
 });
 
